@@ -15,12 +15,12 @@ export default function Map(){
     if (map.current) return;
     map.current = new maplibregl.Map({
       container: mapContainer.current,
-      style: `https://api.maptiler.com/maps/streets/style.json?key=${API_KEY}`,
+   //   style: `https://api.maptiler.com/maps/streets/style.json?key=${API_KEY}`,
   //    style: "https://github.com/jl96032/react-maplibre-app/blob/master/public/osm_liberty.json?",
       //  style: "http://localhost/osm_liberty-localhost.json",
    //   style: "http://localhost:3001/osm_liberty.json",
      // style: "https://master.d34xthyk9j1ki2.amplifyapp.com/osm_liberty.json",
-   //   style: "./osm_liberty.json",
+      style: "./osm_liberty.json",
       center: [lng, lat],
       zoom: zoom
     });

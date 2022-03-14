@@ -1,0 +1,226 @@
+{
+  "version": 8,
+  "name": "OSM Liberty",
+  "metadata": {
+    "maputnik:license": "https://github.com/maputnik/osm-liberty/blob/gh-pages/LICENSE.md",
+    "maputnik:renderer": "mbgljs",
+    "openmaptiles:version": "3.x"
+  },
+  "sources": {
+    "syuu0ypif": {
+      "type": "vector",
+      "tiles": ["https://tiles.enirotest.com/maps/osm/{z}/{x}/{y}.vector.pbf?"],
+      "minZoom": 0,
+      "maxZoom": 20
+    }
+  },
+  "sprite": "https://maputnik.github.io/osm-liberty/sprites/osm-liberty",
+  "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key={key}",
+  "layers": [
+    {
+      "id": "all_landuse",
+      "type": "fill",
+      "source": "syuu0ypif",
+      "source-layer": "land_use",
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(127, 6, 6, 1)", "fill-opacity": 0.2}
+    },
+    {
+      "id": "landuse_industrial",
+      "type": "fill",
+      "source": "syuu0ypif",
+      "source-layer": "land_use",
+      "filter": ["any", ["==", "landuse", "industrial"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(207, 207, 207, 1)", "fill-opacity": 1}
+    },
+    {
+      "id": "landuse_scrub",
+      "type": "fill",
+      "source": "syuu0ypif",
+      "source-layer": "land_use",
+      "filter": [
+        "any",
+        ["==", "landuse", "scrub"],
+        ["==", "landuse", "meadow"]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(196, 255, 188, 1)", "fill-opacity": 1}
+    },
+    {
+      "id": "landuse_wood",
+      "type": "fill",
+      "source": "syuu0ypif",
+      "source-layer": "land_use",
+      "filter": ["any", ["==", "landuse", "forest"], ["==", "landuse", "wood"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(4, 94, 3, 1)", "fill-opacity": 1}
+    },
+    {
+      "id": "landuse_wetland",
+      "type": "fill",
+      "source": "syuu0ypif",
+      "source-layer": "land_use",
+      "filter": ["all", ["==", "landuse", "wetland"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(70, 244, 66, 1)", "fill-opacity": 1}
+    },
+    {
+      "id": "landuse_water",
+      "type": "fill",
+      "source": "syuu0ypif",
+      "source-layer": "land_use",
+      "filter": ["all", ["==", "landuse", "water"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(66, 168, 244, 1)", "fill-opacity": 1}
+    },
+    {
+      "id": "landuse-residential",
+      "type": "fill",
+      "source": "syuu0ypif",
+      "source-layer": "land_use",
+      "filter": ["all", ["==", "landuse", "residential"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(244, 213, 66, 1)", "fill-opacity": 1}
+    },
+    {
+      "id": "landuse-farm",
+      "type": "fill",
+      "source": "syuu0ypif",
+      "source-layer": "land_use",
+      "filter": ["any", ["in", "landuse", "farmland", " farmyard", "grass"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(255, 255, 204, 1)", "fill-opacity": 1}
+    },
+    {
+      "id": "road_motorway-bg",
+      "type": "line",
+      "source": "syuu0ypif",
+      "source-layer": "roads",
+      "filter": [
+        "any",
+        ["==", "highway", "motorway"],
+        ["==", "highway", "motorway_link"]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(13, 13, 13, 1)",
+        "line-width": {"stops": [[6, 6], [10, 6]]}
+      }
+    },
+    {
+      "id": "road_motorway",
+      "type": "line",
+      "source": "syuu0ypif",
+      "source-layer": "roads",
+      "filter": [
+        "any",
+        ["==", "highway", "motorway"],
+        ["==", "highway", "motorway_link"]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {"line-color": "rgba(220, 76, 69, 1)", "line-width": 5}
+    },
+    {
+      "id": "road_secondary-bg",
+      "type": "line",
+      "source": "syuu0ypif",
+      "source-layer": "roads",
+      "filter": ["all", ["==", "highway", "secondary"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"line-color": "rgba(214, 57, 11, 0.6)", "line-width": 5}
+    },
+    {
+      "id": "road_secondary",
+      "type": "line",
+      "source": "syuu0ypif",
+      "source-layer": "roads",
+      "filter": ["all", ["==", "highway", "secondary"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"line-color": "rgba(246, 246, 77, 1)", "line-width": 4}
+    },
+    {
+      "id": "road_residential-bg",
+      "type": "line",
+      "source": "syuu0ypif",
+      "source-layer": "roads",
+      "filter": ["all", ["==", "highway", "residential"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"line-color": "rgba(219, 175, 122, 1)", "line-width": 4}
+    },
+    {
+      "id": "road_service-bg",
+      "type": "line",
+      "source": "syuu0ypif",
+      "source-layer": "roads",
+      "filter": ["all", ["==", "highway", "service"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"line-color": "rgba(219, 175, 122, 1)", "line-width": 3}
+    },
+    {
+      "id": "road_tertiary-bg",
+      "type": "line",
+      "source": "syuu0ypif",
+      "source-layer": "roads",
+      "filter": ["all", ["==", "highway", "tertiary"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"line-color": "rgba(219, 175, 122, 1)", "line-width": 4}
+    },
+    {
+      "id": "road_service",
+      "type": "line",
+      "source": "syuu0ypif",
+      "source-layer": "roads",
+      "filter": ["all", ["==", "highway", "service"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"line-color": "rgba(251, 251, 251, 1)", "line-width": 2}
+    },
+    {
+      "id": "road_residential",
+      "type": "line",
+      "source": "syuu0ypif",
+      "source-layer": "roads",
+      "filter": ["all", ["==", "highway", "residential"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"line-color": "rgba(251, 251, 251, 1)", "line-width": 3}
+    },
+    {
+      "id": "road_footway",
+      "type": "line",
+      "source": "syuu0ypif",
+      "source-layer": "roads",
+      "filter": ["all", ["==", "highway", "footway"]],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(100, 100, 100,1)",
+        "line-width": 1,
+        "line-opacity": 0.5
+      }
+    },
+    {
+      "id": "road_tertiary",
+      "type": "line",
+      "source": "syuu0ypif",
+      "source-layer": "roads",
+      "filter": ["all", ["==", "highway", "tertiary"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"line-color": "rgba(251, 251, 251, 1)", "line-width": 3}
+    },
+    {
+      "id": "all_roads",
+      "type": "line",
+      "source": "syuu0ypif",
+      "source-layer": "roads",
+      "filter": ["all"],
+      "layout": {"visibility": "none"}
+    },
+    {
+      "id": "",
+      "type": "line",
+      "source": "syuu0ypif",
+      "source-layer": "roads",
+      "layout": {"visibility": "none"}
+    }
+  ],
+  "id": "osm-liberty"
+}

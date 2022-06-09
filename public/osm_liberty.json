@@ -15,7 +15,7 @@
     }
   },
   "sprite": "https://api.maptiler.com/maps/openstreetmap/sprite",
-  "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key={1JIfeS9SHvVJt8fORsPr}",
+  "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=1JIfeS9SHvVJt8fORsPr",
   "layers": [
     {
       "id": "all_landuse",

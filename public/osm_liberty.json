@@ -18,13 +18,9 @@
   "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=1JIfeS9SHvVJt8fORsPr",
   "layers": [
     {
-      "id": "all_landuse",
-      "type": "fill",
-      "source": "openmaptiles",
-      "source-layer": "land_use",
-      "minzoom": 11,
-      "layout": {"visibility": "none"},
-      "paint": {"fill-color": "rgba(127, 6, 6, 1)", "fill-opacity": 0.2}
+      "id": "background",
+      "type": "background",
+      "paint": {"background-color": "rgba(239, 239, 239, 1)"}
     },
     {
       "id": "landuse_industrial",
@@ -32,7 +28,7 @@
       "source": "openmaptiles",
       "source-layer": "land_use",
       "filter": ["any", ["==", "landuse", "industrial"]],
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {"fill-color": "rgba(207, 207, 207, 1)", "fill-opacity": 1}
     },
     {
@@ -45,8 +41,34 @@
         ["==", "landuse", "scrub"],
         ["==", "landuse", "meadow"]
       ],
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {"fill-color": "rgba(196, 255, 188, 1)", "fill-opacity": 1}
+    },
+    {
+      "id": "landuse_ amenity",
+      "type": "fill",
+      "source": "openmaptiles",
+      "source-layer": "amenity",
+      "filter": ["all", ["==", "amenity", "school"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(141, 168, 76, 1)", "fill-opacity": 0.9}
+    },
+    {
+      "id": "landuse_cemetery",
+      "type": "fill",
+      "source": "openmaptiles",
+      "source-layer": "land_use",
+      "filter": ["all", ["==", "landuse", "cemetery"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(141, 168, 76, 1)", "fill-opacity": 0.6}
+    },
+    {
+      "id": "landuse_park",
+      "type": "fill",
+      "source": "openmaptiles",
+      "source-layer": "leisure",
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(176, 213, 154, 1)", "fill-opacity": 0.8}
     },
     {
       "id": "landuse_wood",
@@ -54,8 +76,8 @@
       "source": "openmaptiles",
       "source-layer": "land_use",
       "filter": ["any", ["==", "landuse", "forest"], ["==", "landuse", "wood"]],
-      "layout": {"visibility": "none"},
-      "paint": {"fill-color": "rgba(4, 94, 3, 1)", "fill-opacity": 1}
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "hsla(98, 61%, 72%, 0.7)", "fill-opacity": 0.9}
     },
     {
       "id": "landuse_wetland",
@@ -63,8 +85,8 @@
       "source": "openmaptiles",
       "source-layer": "land_use",
       "filter": ["all", ["==", "landuse", "wetland"]],
-      "layout": {"visibility": "none"},
-      "paint": {"fill-color": "rgba(70, 244, 66, 1)", "fill-opacity": 1}
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(176, 213, 154, 1)", "fill-opacity": 0.5}
     },
     {
       "id": "landuse_water",
@@ -72,7 +94,7 @@
       "source": "openmaptiles",
       "source-layer": "land_use",
       "filter": ["all", ["==", "landuse", "water"]],
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {"fill-color": "rgba(66, 168, 244, 1)", "fill-opacity": 1}
     },
     {
@@ -89,9 +111,12 @@
       "type": "fill",
       "source": "openmaptiles",
       "source-layer": "land_use",
-      "filter": ["any", ["in", "landuse", "farmland", " farmyard", "grass"]],
-      "layout": {"visibility": "none"},
-      "paint": {"fill-color": "rgba(255, 255, 204, 1)", "fill-opacity": 1}
+      "filter": [
+        "any",
+        ["in", "landuse", "farmland", " farmyard", "grass", "recreation_ground"]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(176, 213, 154, 1)", "fill-opacity": 0.4}
     },
     {
       "id": "road_motorway_link_casing",
@@ -169,7 +194,7 @@
         ["==", "$type", "LineString"],
         ["!=", "bridge", "yes"],
         ["!=", "tunnel", "yes"],
-        ["in", "class", "residential"]
+        ["in", "class", "residential", "unclassified"]
       ],
       "layout": {"line-cap": "round", "line-join": "round"},
       "paint": {
@@ -256,7 +281,7 @@
         ["==", "$type", "LineString"],
         ["!=", "bridge", "yes"],
         ["!=", "tunnel", "yes"],
-        ["in", "class", "path", "pedestrian", "footway"]
+        ["in", "class", "path", "pedestrian", "footway", "cycleway"]
       ],
       "layout": {"line-join": "round", "visibility": "visible"},
       "paint": {
@@ -291,7 +316,7 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "roads",
-      "minzoom": 16,
+      "minzoom": 14,
       "filter": [
         "all",
         ["!=", "bridge", "yes"],
@@ -305,7 +330,7 @@
       },
       "paint": {
         "line-color": "#fff",
-        "line-width": {"base": 1.2, "stops": [[15.5, 0], [16, 2], [20, 7.5]]}
+        "line-width": {"base": 1.2, "stops": [[15, 1], [16, 2], [20, 7.5]]}
       }
     },
     {
@@ -336,7 +361,7 @@
       "source": "openmaptiles",
       "source-layer": "roads",
       "minzoom": 12,
-      "filter": ["all", ["==", "class", "residential"]],
+      "filter": ["any", ["in", "class", "residential", "unclassified"]],
       "layout": {
         "line-cap": "round",
         "line-join": "round",
@@ -628,11 +653,7 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "roads",
-      "filter": [
-        "all",
-        ["==", "class", "motorway"],
-        ["==", "bridge", "yes"]
-      ],
+      "filter": ["all", ["==", "class", "motorway"], ["==", "bridge", "yes"]],
       "layout": {"line-join": "round", "visibility": "visible"},
       "paint": {
         "line-color": "rgba(219, 58, 6, 1)",
@@ -763,11 +784,7 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "roads",
-      "filter": [
-        "all",
-        ["==", "class", "motorway"],
-        ["==", "bridge", "yes"]
-      ],
+      "filter": ["all", ["==", "class", "motorway"], ["==", "bridge", "yes"]],
       "layout": {"line-join": "round"},
       "paint": {
         "line-color": "rgba(219, 58, 6, 1)",
@@ -1221,6 +1238,64 @@
         "text-size": 10,
         "icon-size": 0.8
       }
+    },
+    {
+      "id": "waterway",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "waterway",
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgb(158,189,255)",
+        "line-width": {"stops": [[6, 0.6], [20, 6]]}
+      }
+    },
+    {
+      "id": "water",
+      "type": "fill",
+      "source": "openmaptiles",
+      "source-layer": "water",
+      "paint": {"fill-color": "rgb(158,189,255)"}
+    },
+    {
+      "id": "building",
+      "type": "fill",
+      "source": "openmaptiles",
+      "source-layer": "building",
+      "filter": [
+        "all",
+        [
+          "!in",
+          "building",
+          "school",
+          "hospital",
+          "university",
+          "stadium",
+          "sports_hall"
+        ],
+        ["!in", "shop", "mall"]
+      ],
+      "paint": {"fill-color": "hsl(35, 8%, 85%)"}
+    },
+    {
+      "id": "building_public",
+      "type": "fill",
+      "source": "openmaptiles",
+      "source-layer": "building",
+      "filter": [
+        "any",
+        [
+          "in",
+          "building",
+          "school",
+          "hospital",
+          "university",
+          "stadium",
+          "sports_hall"
+        ],
+        ["in", "shop", "mall"]
+      ],
+      "paint": {"fill-color": "rgba(209, 113, 96, 1)", "fill-opacity": 0.6}
     }
   ],
   "id": "osm-liberty"

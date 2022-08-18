@@ -1,338 +1,338 @@
 {
   "swimming": {
-    "width": 0,
+    "x": 0,
     "pixelRatio": 1,
-    "height": 0,
-    "x": 50,
-    "y": 50
+    "y": 0,
+    "width": 50,
+    "height": 50
   },
   "airport": {
-    "width": 50,
-    "pixelRatio": 1,
-    "height": 0,
     "x": 50,
-    "y": 50
+    "pixelRatio": 1,
+    "y": 0,
+    "width": 50,
+    "height": 50
   },
   "church": {
-    "width": 100,
+    "x": 100,
     "pixelRatio": 1,
-    "height": 0,
-    "x": 50,
-    "y": 50
+    "y": 0,
+    "width": 50,
+    "height": 50
   },
   "harbour": {
-    "width": 150,
+    "x": 150,
     "pixelRatio": 1,
-    "height": 0,
-    "x": 50,
-    "y": 50
+    "y": 0,
+    "width": 50,
+    "height": 50
   },
   "windfarm": {
-    "width": 200,
+    "x": 200,
     "pixelRatio": 1,
-    "height": 0,
-    "x": 50,
-    "y": 50
+    "y": 0,
+    "width": 50,
+    "height": 50
   },
   "camping": {
-    "width": 250,
+    "x": 250,
     "pixelRatio": 1,
-    "height": 0,
-    "x": 50,
-    "y": 50
+    "y": 0,
+    "width": 50,
+    "height": 50
   },
   "lighthouse": {
-    "width": 300,
+    "x": 300,
     "pixelRatio": 1,
-    "height": 0,
-    "x": 50,
-    "y": 50
+    "y": 0,
+    "width": 50,
+    "height": 50
   },
   "busstation": {
-    "width": 350,
+    "x": 350,
     "pixelRatio": 1,
-    "height": 0,
-    "x": 50,
-    "y": 50
+    "y": 0,
+    "width": 50,
+    "height": 50
   },
   "castle": {
-    "width": 400,
+    "x": 400,
     "pixelRatio": 1,
-    "height": 0,
-    "x": 50,
-    "y": 50
+    "y": 0,
+    "width": 50,
+    "height": 50
   },
   "se_metro": {
-    "width": 450,
+    "x": 450,
     "pixelRatio": 1,
-    "height": 0,
-    "x": 50,
-    "y": 50
+    "y": 0,
+    "width": 50,
+    "height": 50
   },
   "se_tram": {
-    "width": 500,
+    "x": 500,
     "pixelRatio": 1,
-    "height": 0,
-    "x": 50,
-    "y": 50
+    "y": 0,
+    "width": 50,
+    "height": 50
   },
   "se_train": {
-    "width": 550,
+    "x": 550,
     "pixelRatio": 1,
-    "height": 0,
-    "x": 50,
-    "y": 50
+    "y": 0,
+    "width": 50,
+    "height": 50
   },
   "no_metro": {
-    "width": 600,
+    "x": 600,
     "pixelRatio": 1,
-    "height": 0,
-    "x": 50,
-    "y": 50
+    "y": 0,
+    "width": 50,
+    "height": 50
   },
   "dk_metro": {
-    "width": 650,
+    "x": 650,
     "pixelRatio": 1,
-    "height": 0,
-    "x": 50,
-    "y": 50
+    "y": 0,
+    "width": 50,
+    "height": 50
   },
   "dk_tram": {
-    "width": 700,
+    "x": 700,
     "pixelRatio": 1,
-    "height": 0,
-    "x": 50,
-    "y": 50
+    "y": 0,
+    "width": 50,
+    "height": 50
   },
   "dk_train": {
-    "width": 750,
+    "x": 750,
     "pixelRatio": 1,
-    "height": 0,
-    "x": 50,
-    "y": 50
+    "y": 0,
+    "width": 50,
+    "height": 50
   },
   "no_train": {
-    "width": 800,
+    "x": 800,
     "pixelRatio": 1,
-    "height": 0,
-    "x": 50,
-    "y": 50
+    "y": 0,
+    "width": 50,
+    "height": 50
   },
   "hospital": {
-    "width": 850,
+    "x": 850,
     "pixelRatio": 1,
-    "height": 0,
-    "x": 50,
-    "y": 50
+    "y": 0,
+    "width": 50,
+    "height": 50
   },
   "dk_road_block": {
-    "width": 900,
+    "x": 900,
     "pixelRatio": 1,
-    "height": 0,
-    "x": 50,
-    "y": 50
+    "y": 0,
+    "width": 50,
+    "height": 50
   },
   "dubai_metro": {
-    "width": 950,
+    "x": 950,
     "pixelRatio": 1,
-    "height": 0,
-    "x": 50,
-    "y": 50
+    "y": 0,
+    "width": 50,
+    "height": 50
   },
   "pl_metro": {
-    "width": 1000,
+    "x": 1000,
     "pixelRatio": 1,
-    "height": 0,
-    "x": 50,
-    "y": 50
+    "y": 0,
+    "width": 50,
+    "height": 50
   },
   "uae_metro": {
-    "width": 1050,
+    "x": 1050,
     "pixelRatio": 1,
-    "height": 0,
-    "x": 50,
-    "y": 50
+    "y": 0,
+    "width": 50,
+    "height": 50
   },
   "uae_hospital": {
-    "width": 1100,
+    "x": 1100,
     "pixelRatio": 1,
-    "height": 0,
-    "x": 50,
-    "y": 50
+    "y": 0,
+    "width": 50,
+    "height": 50
   },
   "dk_exit": {
-    "width": 0,
+    "x": 0,
     "pixelRatio": 1,
-    "height": 50,
-    "x": 50,
-    "y": 50
+    "y": 50,
+    "width": 50,
+    "height": 50
   },
   "parking": {
-    "width": 50,
-    "pixelRatio": 1,
-    "height": 50,
     "x": 50,
-    "y": 50
+    "pixelRatio": 1,
+    "y": 50,
+    "width": 50,
+    "height": 50
   },
   "swimming_75": {
-    "width": 10,
+    "x": 10,
     "pixelRatio": 1,
-    "height": 110,
-    "x": 30,
-    "y": 30
+    "y": 110,
+    "width": 30,
+    "height": 30
   },
   "airport_75": {
-    "width": 60,
+    "x": 60,
     "pixelRatio": 1,
-    "height": 110,
-    "x": 50,
-    "y": 50
+    "y": 110,
+    "width": 50,
+    "height": 50
   },
   "church_75": {
-    "width": 110,
+    "x": 110,
     "pixelRatio": 1,
-    "height": 110,
-    "x": 30,
-    "y": 30
+    "y": 110,
+    "width": 30,
+    "height": 30
   },
   "harbour_75": {
-    "width": 160,
+    "x": 160,
     "pixelRatio": 1,
-    "height": 110,
-    "x": 30,
-    "y": 30
+    "y": 110,
+    "width": 30,
+    "height": 30
   },
   "windfarm_75": {
-    "width": 210,
+    "x": 210,
     "pixelRatio": 1,
-    "height": 110,
-    "x": 30,
-    "y": 30
+    "y": 110,
+    "width": 30,
+    "height": 30
   },
   "camping_75": {
-    "width": 260,
+    "x": 260,
     "pixelRatio": 1,
-    "height": 110,
-    "x": 30,
-    "y": 30
+    "y": 110,
+    "width": 30,
+    "height": 30
   },
   "lighthouse_75": {
-    "width": 310,
+    "x": 310,
     "pixelRatio": 1,
-    "height": 110,
-    "x": 30,
-    "y": 30
+    "y": 110,
+    "width": 30,
+    "height": 30
   },
   "busstation_75": {
-    "width": 360,
+    "x": 360,
     "pixelRatio": 1,
-    "height": 0,
-    "x": 50,
-    "y": 50
+    "y": 0,
+    "width": 50,
+    "height": 50
   },
   "castle_75": {
-    "width": 410,
+    "x": 410,
     "pixelRatio": 1,
-    "height": 110,
-    "x": 30,
-    "y": 30
+    "y": 110,
+    "width": 30,
+    "height": 30
   },
   "se_metro_75": {
-    "width": 460,
+    "x": 460,
     "pixelRatio": 1,
-    "height": 110,
-    "x": 30,
-    "y": 30
+    "y": 110,
+    "width": 30,
+    "height": 30
   },
   "se_tram_75": {
-    "width": 510,
+    "x": 510,
     "pixelRatio": 1,
-    "height": 110,
-    "x": 30,
-    "y": 30
+    "y": 110,
+    "width": 30,
+    "height": 30
   },
   "se_train_75": {
-    "width": 560,
+    "x": 560,
     "pixelRatio": 1,
-    "height": 110,
-    "x": 30,
-    "y": 30
+    "y": 110,
+    "width": 30,
+    "height": 30
   },
   "no_metro_75": {
-    "width": 610,
+    "x": 610,
     "pixelRatio": 1,
-    "height": 110,
-    "x": 30,
-    "y": 30
+    "y": 110,
+    "width": 30,
+    "height": 30
   },
   "dk_metro_75": {
-    "width": 660,
+    "x": 660,
     "pixelRatio": 1,
-    "height": 110,
-    "x": 30,
-    "y": 30
+    "y": 110,
+    "width": 30,
+    "height": 30
   },
   "dk_tram_75": {
-    "width": 710,
+    "x": 710,
     "pixelRatio": 1,
-    "height": 110,
-    "x": 30,
-    "y": 30
+    "y": 110,
+    "width": 30,
+    "height": 30
   },
   "dk_train_75": {
-    "width": 760,
+    "x": 760,
     "pixelRatio": 1,
-    "height": 110,
-    "x": 30,
-    "y": 30
+    "y": 110,
+    "width": 30,
+    "height": 30
   },
   "no_train_75": {
-    "width": 810,
+    "x": 810,
     "pixelRatio": 1,
-    "height": 110,
-    "x": 30,
-    "y": 30
+    "y": 110,
+    "width": 30,
+    "height": 30
   },
   "hospital_75": {
-    "width": 860,
+    "x": 860,
     "pixelRatio": 1,
-    "height": 110,
-    "x": 30,
-    "y": 30
+    "y": 110,
+    "width": 30,
+    "height": 30
   },
   "dk_road_block_75": {
-    "width": 910,
+    "x": 910,
     "pixelRatio": 1,
-    "height": 110,
-    "x": 30,
-    "y": 30
+    "y": 110,
+    "width": 30,
+    "height": 30
   },
   "dubai_metro_75": {
-    "width": 960,
+    "x": 960,
     "pixelRatio": 1,
-    "height": 110,
-    "x": 30,
-    "y": 30
+    "y": 110,
+    "width": 30,
+    "height": 30
   },
   "pl_metro_75": {
-    "width": 1010,
+    "x": 1010,
     "pixelRatio": 1,
-    "height": 110,
-    "x": 30,
-    "y": 30
+    "y": 110,
+    "width": 30,
+    "height": 30
   },
   "uae_metro_75": {
-    "width": 1060,
+    "x": 1060,
     "pixelRatio": 1,
-    "height": 110,
-    "x": 30,
-    "y": 30
+    "y": 110,
+    "width": 30,
+    "height": 30
   },
   "uae_hospital_75": {
-    "width": 1110,
+    "x": 1110,
     "pixelRatio": 1,
-    "height": 110,
-    "x": 30,
-    "y": 30
+    "y": 110,
+    "width": 30,
+    "height": 30
   }
 }

@@ -1,0 +1,338 @@
+{
+  "swimming": {
+    "width": 0,
+    "pixelRatio": 1,
+    "height": 0,
+    "x": 50,
+    "y": 50
+  },
+  "airport": {
+    "width": 50,
+    "pixelRatio": 1,
+    "height": 0,
+    "x": 50,
+    "y": 50
+  },
+  "church": {
+    "width": 100,
+    "pixelRatio": 1,
+    "height": 0,
+    "x": 50,
+    "y": 50
+  },
+  "harbour": {
+    "width": 150,
+    "pixelRatio": 1,
+    "height": 0,
+    "x": 50,
+    "y": 50
+  },
+  "windfarm": {
+    "width": 200,
+    "pixelRatio": 1,
+    "height": 0,
+    "x": 50,
+    "y": 50
+  },
+  "camping": {
+    "width": 250,
+    "pixelRatio": 1,
+    "height": 0,
+    "x": 50,
+    "y": 50
+  },
+  "lighthouse": {
+    "width": 300,
+    "pixelRatio": 1,
+    "height": 0,
+    "x": 50,
+    "y": 50
+  },
+  "busstation": {
+    "width": 350,
+    "pixelRatio": 1,
+    "height": 0,
+    "x": 50,
+    "y": 50
+  },
+  "castle": {
+    "width": 400,
+    "pixelRatio": 1,
+    "height": 0,
+    "x": 50,
+    "y": 50
+  },
+  "se_metro": {
+    "width": 450,
+    "pixelRatio": 1,
+    "height": 0,
+    "x": 50,
+    "y": 50
+  },
+  "se_tram": {
+    "width": 500,
+    "pixelRatio": 1,
+    "height": 0,
+    "x": 50,
+    "y": 50
+  },
+  "se_train": {
+    "width": 550,
+    "pixelRatio": 1,
+    "height": 0,
+    "x": 50,
+    "y": 50
+  },
+  "no_metro": {
+    "width": 600,
+    "pixelRatio": 1,
+    "height": 0,
+    "x": 50,
+    "y": 50
+  },
+  "dk_metro": {
+    "width": 650,
+    "pixelRatio": 1,
+    "height": 0,
+    "x": 50,
+    "y": 50
+  },
+  "dk_tram": {
+    "width": 700,
+    "pixelRatio": 1,
+    "height": 0,
+    "x": 50,
+    "y": 50
+  },
+  "dk_train": {
+    "width": 750,
+    "pixelRatio": 1,
+    "height": 0,
+    "x": 50,
+    "y": 50
+  },
+  "no_train": {
+    "width": 800,
+    "pixelRatio": 1,
+    "height": 0,
+    "x": 50,
+    "y": 50
+  },
+  "hospital": {
+    "width": 850,
+    "pixelRatio": 1,
+    "height": 0,
+    "x": 50,
+    "y": 50
+  },
+  "dk_road_block": {
+    "width": 900,
+    "pixelRatio": 1,
+    "height": 0,
+    "x": 50,
+    "y": 50
+  },
+  "dubai_metro": {
+    "width": 950,
+    "pixelRatio": 1,
+    "height": 0,
+    "x": 50,
+    "y": 50
+  },
+  "pl_metro": {
+    "width": 1000,
+    "pixelRatio": 1,
+    "height": 0,
+    "x": 50,
+    "y": 50
+  },
+  "uae_metro": {
+    "width": 1050,
+    "pixelRatio": 1,
+    "height": 0,
+    "x": 50,
+    "y": 50
+  },
+  "uae_hospital": {
+    "width": 1100,
+    "pixelRatio": 1,
+    "height": 0,
+    "x": 50,
+    "y": 50
+  },
+  "dk_exit": {
+    "width": 0,
+    "pixelRatio": 1,
+    "height": 50,
+    "x": 50,
+    "y": 50
+  },
+  "parking": {
+    "width": 50,
+    "pixelRatio": 1,
+    "height": 50,
+    "x": 50,
+    "y": 50
+  },
+  "swimming_75": {
+    "width": 10,
+    "pixelRatio": 1,
+    "height": 110,
+    "x": 30,
+    "y": 30
+  },
+  "airport_75": {
+    "width": 60,
+    "pixelRatio": 1,
+    "height": 110,
+    "x": 50,
+    "y": 50
+  },
+  "church_75": {
+    "width": 110,
+    "pixelRatio": 1,
+    "height": 110,
+    "x": 30,
+    "y": 30
+  },
+  "harbour_75": {
+    "width": 160,
+    "pixelRatio": 1,
+    "height": 110,
+    "x": 30,
+    "y": 30
+  },
+  "windfarm_75": {
+    "width": 210,
+    "pixelRatio": 1,
+    "height": 110,
+    "x": 30,
+    "y": 30
+  },
+  "camping_75": {
+    "width": 260,
+    "pixelRatio": 1,
+    "height": 110,
+    "x": 30,
+    "y": 30
+  },
+  "lighthouse_75": {
+    "width": 310,
+    "pixelRatio": 1,
+    "height": 110,
+    "x": 30,
+    "y": 30
+  },
+  "busstation_75": {
+    "width": 360,
+    "pixelRatio": 1,
+    "height": 0,
+    "x": 50,
+    "y": 50
+  },
+  "castle_75": {
+    "width": 410,
+    "pixelRatio": 1,
+    "height": 110,
+    "x": 30,
+    "y": 30
+  },
+  "se_metro_75": {
+    "width": 460,
+    "pixelRatio": 1,
+    "height": 110,
+    "x": 30,
+    "y": 30
+  },
+  "se_tram_75": {
+    "width": 510,
+    "pixelRatio": 1,
+    "height": 110,
+    "x": 30,
+    "y": 30
+  },
+  "se_train_75": {
+    "width": 560,
+    "pixelRatio": 1,
+    "height": 110,
+    "x": 30,
+    "y": 30
+  },
+  "no_metro_75": {
+    "width": 610,
+    "pixelRatio": 1,
+    "height": 110,
+    "x": 30,
+    "y": 30
+  },
+  "dk_metro_75": {
+    "width": 660,
+    "pixelRatio": 1,
+    "height": 110,
+    "x": 30,
+    "y": 30
+  },
+  "dk_tram_75": {
+    "width": 710,
+    "pixelRatio": 1,
+    "height": 110,
+    "x": 30,
+    "y": 30
+  },
+  "dk_train_75": {
+    "width": 760,
+    "pixelRatio": 1,
+    "height": 110,
+    "x": 30,
+    "y": 30
+  },
+  "no_train_75": {
+    "width": 810,
+    "pixelRatio": 1,
+    "height": 110,
+    "x": 30,
+    "y": 30
+  },
+  "hospital_75": {
+    "width": 860,
+    "pixelRatio": 1,
+    "height": 110,
+    "x": 30,
+    "y": 30
+  },
+  "dk_road_block_75": {
+    "width": 910,
+    "pixelRatio": 1,
+    "height": 110,
+    "x": 30,
+    "y": 30
+  },
+  "dubai_metro_75": {
+    "width": 960,
+    "pixelRatio": 1,
+    "height": 110,
+    "x": 30,
+    "y": 30
+  },
+  "pl_metro_75": {
+    "width": 1010,
+    "pixelRatio": 1,
+    "height": 110,
+    "x": 30,
+    "y": 30
+  },
+  "uae_metro_75": {
+    "width": 1060,
+    "pixelRatio": 1,
+    "height": 110,
+    "x": 30,
+    "y": 30
+  },
+  "uae_hospital_75": {
+    "width": 1110,
+    "pixelRatio": 1,
+    "height": 110,
+    "x": 30,
+    "y": 30
+  }
+}

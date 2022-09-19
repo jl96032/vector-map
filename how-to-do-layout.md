@@ -1,4 +1,5 @@
 ## point symbols
+
   ### how to create and maintain sprites library
     #### guide lines for styling
     according to the doc of mapbox 
@@ -31,16 +32,21 @@
       },
     ```
   ### overlap
+
   ### prioritazation 
     To simplify the layout file, we should use {class}_100 or {class}_75 in the 
     Icon Layout properties -> Image when they have same priority value
+    
 ## text 
+
   #### text size
      size 12 is good for normal text
      size 10 and bold if for important text
+
   #### font
     Arial is good enough
     Arial Italic can be used for some special objects
+
   ### anchor point
     https://docs.mapbox.com/help/troubleshooting/optimize-map-label-placement/
     Label density can be used for alternative anchor points

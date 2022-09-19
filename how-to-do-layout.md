@@ -1,7 +1,8 @@
 ## point symbols
 
-  ### how to create and maintain sprites library
-    #### guide lines for styling
+###how to create and maintain sprites library
+  
+#### guide lines for styling
     according to the doc of mapbox 
     https://maplibre.org/maplibre-gl-js-docs/style-spec/sprite/
 
@@ -13,7 +14,7 @@
 
     currently, we are setting symbols with the following size
     
-    ####  our origin png size
+####  our origin png size
       - retina 100% 38X38
       - retina 75% 28X28
 
@@ -31,28 +32,33 @@
         "y": 190 //vertical location for image center couting from left up corner
       },
     ```
-  ### overlap
+### overlap
 
-  ### prioritazation 
+### prioritazation 
+
     To simplify the layout file, we should use {class}_100 or {class}_75 in the 
     Icon Layout properties -> Image when they have same priority value
-    
+
 ## text 
 
-  #### text size
+#### text size
+
      size 12 is good for normal text
      size 10 and bold if for important text
 
-  #### font
+#### font
+
     Arial is good enough
     Arial Italic can be used for some special objects
 
-  ### anchor point
+### anchor point
+
     https://docs.mapbox.com/help/troubleshooting/optimize-map-label-placement/
     Label density can be used for alternative anchor points
     sample text-variable-anchor = ["top", "bottom", "left"]
 
 
 ### prioritazation 
+
   To simplify the layout file, we should use {class}_100 or {class}_75 in the 
   Icon Layout properties -> Image when they have same priority value

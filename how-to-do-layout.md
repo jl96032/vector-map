@@ -34,6 +34,8 @@
     ```
 ### overlap
 
+### collision control related to png size
+
 ### prioritazation 
 
     To simplify the layout file, we should use {class}_100 or {class}_75 in the 
@@ -56,6 +58,11 @@
     https://docs.mapbox.com/help/troubleshooting/optimize-map-label-placement/
     Label density can be used for alternative anchor points
     sample text-variable-anchor = ["top", "bottom", "left"]
+
+### how to display collision outline of texts (how to do in maputnik???)
+
+  https://docs.mapbox.com/mapbox-gl-js/api/map/#instance-members-debug-features
+  map.showCollisionBoxes = true
 
 
 ### prioritazation 

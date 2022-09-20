@@ -1,8 +1,9 @@
 import React, { useRef, useEffect, useState } from 'react';
 import maplibregl from 'maplibre-gl';
+import 'maplibre-gl/dist/maplibre-gl.css';
 import './map.css';
 
-export default function Map(){
+function Map(props){
   const mapContainer = useRef(null);
   const map = useRef(null);
   //copenhagen 12.549133, 55.666742
@@ -12,7 +13,7 @@ export default function Map(){
   const [API_KEY] = useState('1JIfeS9SHvVJt8fORsPr');
 
   useEffect(() => {
-    if (map.current) return;
+   // if (map.current) return;
     map.current = new maplibregl.Map({
       container: mapContainer.current,
    //   style: `https://api.maptiler.com/maps/streets/style.json?key=${API_KEY}`,
@@ -24,7 +25,12 @@ export default function Map(){
       center: [lng, lat],
       zoom: zoom
     });
-    map.current.addControl(new maplibregl.NavigationControl(), 'top-right');
+    map.current.addControl(new maplibregl.NavigationControl());
+
+    // shows the collision box on texts, even line texts
+    // console.log("showCollisionBoxes ", props.showCollisionBoxes);
+    map.current.showCollisionBoxes = props.showCollisionBoxes;
+    
 /*
     map.current.on('load', function () {
       map.current.addSource('osm', {
@@ -58,3 +64,5 @@ export default function Map(){
     </div>
   );
 }
+
+export {Map};

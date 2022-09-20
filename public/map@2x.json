@@ -97,7 +97,7 @@
     "width": 50,
     "height": 50
   },
-  "dk_tram": {
+  "dk_s_train": {
     "x": 700,
     "pixelRatio": 1,
     "y": 0,
@@ -279,7 +279,7 @@
     "width": 30,
     "height": 30
   },
-  "dk_tram_75": {
+  "dk_s_train_75": {
     "x": 710,
     "pixelRatio": 1,
     "y": 110,

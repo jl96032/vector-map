@@ -61,8 +61,8 @@
 
 ### how to display collision outline of texts (how to do in maputnik???)
 
-  https://docs.mapbox.com/mapbox-gl-js/api/map/#instance-members-debug-features
-  map.showCollisionBoxes = true
+    https://docs.mapbox.com/mapbox-gl-js/api/map/#instance-members-debug-features 
+    map.showCollisionBoxes = true
 
 
 ### prioritazation 

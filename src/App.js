@@ -1,24 +1,24 @@
 import logo from './logo.svg';
-import Map from './components/map.js';
+import {Map} from './components/map.js';
 import './App.css';
+import Navbar from './components/navbar';
+import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom'
 
 function App() {
-  
-
-  
-  fetch("./osm_liberty.json").then(
-    function(res){
-    return res.json()
-  }).catch(
-    function(err){
-      console.log(err, ' error')
-    }
-  )
   return (
-    <div className="App">
-      <Map/>
-    </div>
+    <Router>
+      <ul>
+        <li>
+          <Link to="/showCollisionBoxes">ShowCollisionBoxes</Link>
+        </li>
+      </ul>
+        <Routes>
+          <Route exact path="/showCollisionBoxes" element={<Map showCollisionBoxes={true}/>}/>
+          <Route exact path="/*" element={<Map showCollisionBoxes={false}/>}/>
+        </Routes>
+    </Router>
   );
 }
 
 export default App;
+

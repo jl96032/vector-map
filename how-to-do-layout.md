@@ -1,3 +1,9 @@
+## 
+
+    layers on the botton in the layerslist have higher priority.
+    "padding" can be used to block souring symbols
+
+
 ## point symbols
 
 ###how to create and maintain sprites library
@@ -69,3 +75,18 @@
 
   To simplify the layout file, we should use {class}_100 or {class}_75 in the 
   Icon Layout properties -> Image when they have same priority value
+
+### how to create sprites
+
+https://www.npmjs.com/package/mbsprite
+
+
+### how to use expressions in maplayout
+
+https://bl.ocks.org/malwoodsantoro/e1737dcf458d278c16db82ad29679a11
+
+
+### what will happen if filtered attribute does not exist
+    the test will go on, so need to becareful 
+
+

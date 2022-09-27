@@ -1,180 +1,180 @@
 {
-  "swimming": {
+  "swimming_100": {
     "x": 0,
     "pixelRatio": 1,
     "y": 0,
     "width": 50,
     "height": 50
   },
-  "airport": {
+  "airport_100": {
     "x": 50,
     "pixelRatio": 1,
     "y": 0,
     "width": 50,
     "height": 50
   },
-  "church": {
+  "church_100": {
     "x": 100,
     "pixelRatio": 1,
     "y": 0,
     "width": 50,
     "height": 50
   },
-  "harbour": {
+  "harbour_100": {
     "x": 150,
     "pixelRatio": 1,
     "y": 0,
     "width": 50,
     "height": 50
   },
-  "windfarm": {
+  "windfarm_100": {
     "x": 200,
     "pixelRatio": 1,
     "y": 0,
     "width": 50,
     "height": 50
   },
-  "camping": {
+  "camping_100": {
     "x": 250,
     "pixelRatio": 1,
     "y": 0,
     "width": 50,
     "height": 50
   },
-  "lighthouse": {
+  "lighthouse_100": {
     "x": 300,
     "pixelRatio": 1,
     "y": 0,
     "width": 50,
     "height": 50
   },
-  "busstation": {
+  "busstation_100": {
     "x": 350,
     "pixelRatio": 1,
     "y": 0,
     "width": 50,
     "height": 50
   },
-  "castle": {
+  "castle_100": {
     "x": 400,
     "pixelRatio": 1,
     "y": 0,
     "width": 50,
     "height": 50
   },
-  "se_metro": {
+  "se_metro_100": {
     "x": 450,
     "pixelRatio": 1,
     "y": 0,
     "width": 50,
     "height": 50
   },
-  "se_tram": {
+  "se_tram_100": {
     "x": 500,
     "pixelRatio": 1,
     "y": 0,
     "width": 50,
     "height": 50
   },
-  "se_train": {
+  "se_train_100": {
     "x": 550,
     "pixelRatio": 1,
     "y": 0,
     "width": 50,
     "height": 50
   },
-  "no_metro": {
+  "no_metro_100": {
     "x": 600,
     "pixelRatio": 1,
     "y": 0,
     "width": 50,
     "height": 50
   },
-  "dk_metro": {
+  "dk_metro_100": {
     "x": 650,
     "pixelRatio": 1,
     "y": 0,
     "width": 50,
     "height": 50
   },
-  "dk_s_train": {
+  "dk_s_train_100": {
     "x": 700,
     "pixelRatio": 1,
     "y": 0,
     "width": 50,
     "height": 50
   },
-  "dk_train": {
+  "dk_train_100": {
     "x": 750,
     "pixelRatio": 1,
     "y": 0,
     "width": 50,
     "height": 50
   },
-  "no_train": {
+  "no_train_100": {
     "x": 800,
     "pixelRatio": 1,
     "y": 0,
     "width": 50,
     "height": 50
   },
-  "hospital": {
+  "hospital_100": {
     "x": 850,
     "pixelRatio": 1,
     "y": 0,
     "width": 50,
     "height": 50
   },
-  "dk_road_block": {
+  "dk_road_block_100": {
     "x": 900,
     "pixelRatio": 1,
     "y": 0,
     "width": 50,
     "height": 50
   },
-  "dubai_metro": {
+  "dubai_metro_100": {
     "x": 950,
     "pixelRatio": 1,
     "y": 0,
     "width": 50,
     "height": 50
   },
-  "pl_metro": {
+  "pl_metro_100": {
     "x": 1000,
     "pixelRatio": 1,
     "y": 0,
     "width": 50,
     "height": 50
   },
-  "uae_metro": {
+  "uae_metro_100": {
     "x": 1050,
     "pixelRatio": 1,
     "y": 0,
     "width": 50,
     "height": 50
   },
-  "uae_hospital": {
+  "uae_hospital_100": {
     "x": 1100,
     "pixelRatio": 1,
     "y": 0,
     "width": 50,
     "height": 50
   },
-  "dk_exit": {
+  "dk_exit_100": {
     "x": 0,
     "pixelRatio": 1,
     "y": 50,
     "width": 50,
     "height": 50
   },
-  "parking": {
+  "parking_100": {
     "x": 50,
     "pixelRatio": 1,
     "y": 50,
     "width": 50,
     "height": 50
   },
-  "oneway": {
+  "oneway_100": {
     "x": 250,
     "pixelRatio": 1,
     "y": 50,

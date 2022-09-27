@@ -1,3 +1,34 @@
+# areas
+
+## landuse
+
+  ### parking
+
+    $."amenity" == "parking"
+
+  ### buildup area
+
+    $."landuse" == "residential"
+
+    Copenhagen water park is classified as pitch as well
+
+  ### forest
+
+    ($."landuse" == "forest")
+  
+  ### leisure
+
+    ($."leisure" == "park" || ($."leisure" == "pitch" && $."sport" != "surfing"))
+    Copenhagen cable park on water is classified as pitch as well, so not good to use green. 
+
+  ### school 
+
+    ($."amenity" == "school")
+
+  ### water
+
+    ($."natural" == "water")
+
 # points
 
 ## sql 
@@ -47,6 +78,12 @@
 ##It's possible to draw center points directly on maputnik
   just specify the filed that want to display
 
+
+## line
+
+### rail
+    ["name", "tunnel", "bridge"] attributes 
+    exists($."railway") && $."railway" != "ferry" && $."railway" != "proposed"
 
 
 

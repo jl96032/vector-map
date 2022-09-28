@@ -24,11 +24,17 @@
       "paint": {"background-color": "rgba(239, 239, 239, 1)"}
     },
     {
-      "id": "water",
+      "id": "landuse_scrub",
       "type": "fill",
       "source": "openmaptiles",
-      "source-layer": "water",
-      "paint": {"fill-color": "rgb(158,189,255)"}
+      "source-layer": "land_use",
+      "filter": [
+        "any",
+        ["==", "landuse", "scrub"],
+        ["==", "landuse", "meadow"]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(200, 254, 193, 1)", "fill-opacity": 1}
     },
     {
       "id": "landuse_industrial",
@@ -69,15 +75,6 @@
       "filter": ["all", ["==", "landuse", "cemetery"]],
       "layout": {"visibility": "visible"},
       "paint": {"fill-color": "rgba(141, 168, 76, 1)", "fill-opacity": 0.6}
-    },
-    {
-      "id": "landuse_wood",
-      "type": "fill",
-      "source": "openmaptiles",
-      "source-layer": "land_use",
-      "filter": ["any", ["==", "landuse", "forest"], ["==", "landuse", "wood"]],
-      "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "hsla(98, 61%, 72%, 0.7)", "fill-opacity": 0.9}
     },
     {
       "id": "landuse_wetland",
@@ -125,17 +122,13 @@
       "paint": {"fill-color": "rgba(141, 168, 76, 1)", "fill-opacity": 0.9}
     },
     {
-      "id": "landuse_scrub",
+      "id": "landuse_wood",
       "type": "fill",
       "source": "openmaptiles",
-      "source-layer": "land_use",
-      "filter": [
-        "any",
-        ["==", "landuse", "scrub"],
-        ["==", "landuse", "meadow"]
-      ],
+      "source-layer": "forest",
+      "filter": ["all"],
       "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "rgba(196, 255, 188, 1)", "fill-opacity": 1}
+      "paint": {"fill-color": "rgba(125, 211, 94, 0.8)", "fill-opacity": 1}
     },
     {
       "id": "landuse-farm",
@@ -148,6 +141,14 @@
       ],
       "layout": {"visibility": "visible"},
       "paint": {"fill-color": "rgba(176, 213, 154, 1)", "fill-opacity": 0.4}
+    },
+    {
+      "id": "water",
+      "type": "fill",
+      "source": "openmaptiles",
+      "source-layer": "water",
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgb(158,189,255)"}
     },
     {
       "id": "waterway",
@@ -1166,11 +1167,57 @@
           "stadium",
           "sports_hall"
         ],
-        ["!in", "shop", "mall"]
+        ["!in", "shop", "mall"],
+        [
+          "!in",
+          "building",
+          "industrial",
+          "warehouse",
+          "parking",
+          "manufacture",
+          "hangar",
+          "garages",
+          "service",
+          "transportation",
+          "office",
+          "retail",
+          "commercial"
+        ]
       ],
       "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": "hsl(35, 8%, 85%)",
+        "fill-antialias": true,
+        "fill-translate-anchor": "map"
+      }
+    },
+    {
+      "id": "building-industrial",
+      "type": "fill",
+      "source": "openmaptiles",
+      "source-layer": "building",
+      "minzoom": 6,
+      "filter": [
+        "all",
+        [
+          "in",
+          "building",
+          "industrial",
+          "warehouse",
+          "parking",
+          "manufacture",
+          "hangar",
+          "garages",
+          "service",
+          "transportation",
+          "office",
+          "retail",
+          "commercial"
+        ]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "fill-color": "rgba(155, 155, 155, 0.6)",
         "fill-antialias": true,
         "fill-translate-anchor": "map"
       }

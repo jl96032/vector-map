@@ -477,71 +477,6 @@
       }
     },
     {
-      "id": "road_major_rail",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "railway",
-      "minzoom": 12,
-      "filter": ["all", ["!=", "bridge", "yes"], ["!=", "tunnel", "yes"]],
-      "paint": {
-        "line-color": "rgba(5, 3, 3, 1)",
-        "line-width": {"base": 1.4, "stops": [[14, 0.4], [15, 0.75], [20, 2]]}
-      }
-    },
-    {
-      "id": "road_major_rail_hatching",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "railway",
-      "minzoom": 13,
-      "filter": [
-        "all",
-        ["!=", "bridge", "yes"],
-        ["!=", "tunnel", "yes"],
-        ["==", "class", "rail"]
-      ],
-      "paint": {
-        "line-color": "#bbb",
-        "line-dasharray": [0.2, 8],
-        "line-width": {"base": 1.4, "stops": [[14.5, 0], [15, 3], [20, 8]]}
-      }
-    },
-    {
-      "id": "road_transit_rail",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "railway",
-      "minzoom": 12,
-      "filter": [
-        "all",
-        ["!=", "bridge", "yes"],
-        ["!=", "tunnel", "yes"],
-        ["==", "class", "transit"]
-      ],
-      "paint": {
-        "line-color": "#bbb",
-        "line-width": {"base": 1.4, "stops": [[14, 0.4], [15, 0.75], [20, 2]]}
-      }
-    },
-    {
-      "id": "road_transit_rail_hatching",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "railway",
-      "minzoom": 12,
-      "filter": [
-        "all",
-        ["!=", "bridge", "yes"],
-        ["!=", "tunnel", "yes"],
-        ["==", "class", "transit"]
-      ],
-      "paint": {
-        "line-color": "#bbb",
-        "line-dasharray": [0.2, 8],
-        "line-width": {"base": 1.4, "stops": [[14.5, 0], [15, 3], [20, 8]]}
-      }
-    },
-    {
       "id": "bridge_motorway_link_casing",
       "type": "line",
       "source": "openmaptiles",
@@ -808,52 +743,6 @@
       }
     },
     {
-      "id": "bridge_major_rail",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "railway",
-      "filter": ["all", ["==", "class", "rail"], ["==", "bridge", "yes"]],
-      "paint": {
-        "line-color": "#bbb",
-        "line-width": {"base": 1.4, "stops": [[14, 0.4], [15, 0.75], [20, 2]]}
-      }
-    },
-    {
-      "id": "bridge_major_rail_hatching",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "railway",
-      "filter": ["all", ["==", "class", "rail"], ["==", "bridge", "yes"]],
-      "paint": {
-        "line-color": "#bbb",
-        "line-dasharray": [0.2, 8],
-        "line-width": {"base": 1.4, "stops": [[14.5, 0], [15, 3], [20, 8]]}
-      }
-    },
-    {
-      "id": "bridge_transit_rail",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "railway",
-      "filter": ["all", ["==", "class", "transit"], ["==", "bridge", "yes"]],
-      "paint": {
-        "line-color": "#bbb",
-        "line-width": {"base": 1.4, "stops": [[14, 0.4], [15, 0.75], [20, 2]]}
-      }
-    },
-    {
-      "id": "bridge_transit_rail_hatching",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "railway",
-      "filter": ["all", ["==", "class", "transit"], ["==", "bridge", "yes"]],
-      "paint": {
-        "line-color": "#bbb",
-        "line-dasharray": [0.2, 8],
-        "line-width": {"base": 1.4, "stops": [[14.5, 0], [15, 3], [20, 8]]}
-      }
-    },
-    {
       "id": "tunnel_motorway_link_casing",
       "type": "line",
       "source": "openmaptiles",
@@ -1105,52 +994,6 @@
       }
     },
     {
-      "id": "tunnel_major_rail",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "railway",
-      "filter": ["all", ["==", "tunnel", "yes"], ["in", "class", "rail"]],
-      "paint": {
-        "line-color": "#bbb",
-        "line-width": {"base": 1.4, "stops": [[14, 0.4], [15, 0.75], [20, 2]]}
-      }
-    },
-    {
-      "id": "tunnel_major_rail_hatching",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "railway",
-      "filter": ["all", ["==", "tunnel", "yes"], ["==", "class", "rail"]],
-      "paint": {
-        "line-color": "#bbb",
-        "line-dasharray": [0.2, 8],
-        "line-width": {"base": 1.4, "stops": [[14.5, 0], [15, 3], [20, 8]]}
-      }
-    },
-    {
-      "id": "tunnel_transit_rail",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "railway",
-      "filter": ["all", ["==", "tunnel", "yes"], ["in", "class", "transit"]],
-      "paint": {
-        "line-color": "#bbb",
-        "line-width": {"base": 1.4, "stops": [[14, 0.4], [15, 0.75], [20, 2]]}
-      }
-    },
-    {
-      "id": "tunnel_transit_rail_hatching",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "railway",
-      "filter": ["all", ["==", "tunnel", "yes"], ["==", "class", "transit"]],
-      "paint": {
-        "line-color": "#bbb",
-        "line-dasharray": [0.2, 8],
-        "line-width": {"base": 1.4, "stops": [[14.5, 0], [15, 3], [20, 8]]}
-      }
-    },
-    {
       "id": "building",
       "type": "fill",
       "source": "openmaptiles",
@@ -1267,6 +1110,165 @@
         "text-color": "rgba(9, 44, 184, 0.5)",
         "text-halo-color": "rgba(3, 7, 246, 0.5)",
         "text-halo-width": 0.3
+      }
+    },
+    {
+      "id": "railway_tunnel_transit",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "filter": ["all", ["==", "tunnel", "yes"], ["in", "class", "transit"]],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "#bbb",
+        "line-width": {"base": 1.4, "stops": [[14, 0.4], [15, 0.75], [20, 2]]}
+      }
+    },
+    {
+      "id": "railway_major_tunnel_hatching",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "filter": ["all", ["==", "tunnel", "yes"]],
+      "layout": {"visibility": "none"},
+      "paint": {
+        "line-color": "rgba(20, 16, 16, 1)",
+        "line-dasharray": ["literal", [1, 6]],
+        "line-width": {"base": 1.4, "stops": [[14.5, 0], [15, 3], [20, 8]]}
+      }
+    },
+    {
+      "id": "railway_major_tunnel",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "filter": ["all", ["==", "tunnel", "yes"]],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(139, 136, 136, 1)",
+        "line-width": {"base": 1.4, "stops": [[14, 1], [15, 1], [20, 2]]},
+        "line-blur": 0,
+        "line-dasharray": ["literal", [5, 3]]
+      }
+    },
+    {
+      "id": "railway_transit_tunnel_hatching",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "filter": ["all", ["==", "tunnel", "yes"], ["==", "class", "transit"]],
+      "paint": {
+        "line-color": "#bbb",
+        "line-dasharray": [0.2, 8],
+        "line-width": {"base": 1.4, "stops": [[14.5, 0], [15, 3], [20, 8]]}
+      }
+    },
+    {
+      "id": "railway_transit_bridge_hatching",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "filter": ["all", ["==", "class", "transit"], ["==", "bridge", "yes"]],
+      "paint": {
+        "line-color": "#bbb",
+        "line-dasharray": [0.2, 8],
+        "line-width": {"base": 1.4, "stops": [[14.5, 0], [15, 3], [20, 8]]}
+      }
+    },
+    {
+      "id": "railway_transit_bridge",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "filter": ["all", ["==", "class", "transit"], ["==", "bridge", "yes"]],
+      "paint": {
+        "line-color": "#bbb",
+        "line-width": {"base": 1.4, "stops": [[14, 0.4], [15, 0.75], [20, 2]]}
+      }
+    },
+    {
+      "id": "railway_major_bridge_hatching",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "filter": ["all", ["==", "bridge", "yes"]],
+      "layout": {"visibility": "none"},
+      "paint": {
+        "line-color": "#bbb",
+        "line-dasharray": [0.2, 8],
+        "line-width": {"base": 1.4, "stops": [[14.5, 1], [15, 3], [20, 8]]}
+      }
+    },
+    {
+      "id": "railway_major_bridge",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "filter": ["all", ["==", "bridge", "yes"]],
+      "paint": {
+        "line-color": "rgba(65, 63, 63, 0.6)",
+        "line-width": {"base": 1.4, "stops": [[14, 2], [15, 5], [20, 5]]}
+      }
+    },
+    {
+      "id": "railway_transit_hatching",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "minzoom": 12,
+      "filter": [
+        "all",
+        ["!=", "bridge", "yes"],
+        ["!=", "tunnel", "yes"],
+        ["==", "class", "transit"]
+      ],
+      "paint": {
+        "line-color": "#bbb",
+        "line-dasharray": [0.2, 8],
+        "line-width": {"base": 1.4, "stops": [[14.5, 0], [15, 3], [20, 8]]}
+      }
+    },
+    {
+      "id": "railway-major",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "minzoom": 12,
+      "filter": ["all", ["!=", "bridge", "yes"], ["!=", "tunnel", "yes"]],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgba(5, 3, 3, 1)",
+        "line-width": {"base": 1.4, "stops": [[14, 0.4], [15, 0.75], [20, 2]]}
+      }
+    },
+    {
+      "id": "railway_transit",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "minzoom": 12,
+      "filter": [
+        "all",
+        ["!=", "bridge", "yes"],
+        ["!=", "tunnel", "yes"],
+        ["==", "class", "transit"]
+      ],
+      "paint": {
+        "line-color": "#bbb",
+        "line-width": {"base": 1.4, "stops": [[14, 0.4], [15, 0.75], [20, 2]]}
+      }
+    },
+    {
+      "id": "railway_major_hatching",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "railway",
+      "minzoom": 13,
+      "filter": ["all", ["!=", "bridge", "yes"], ["!=", "tunnel", "yes"]],
+      "paint": {
+        "line-color": "#bbb",
+        "line-dasharray": [0.2, 8],
+        "line-width": {"base": 1.4, "stops": [[14.5, 0], [15, 3], [20, 8]]}
       }
     },
     {

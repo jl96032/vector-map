@@ -259,7 +259,14 @@
         "all",
         ["!=", "bridge", "yes"],
         ["!=", "tunnel", "yes"],
-        ["in", "class", "secondary", "secondary_link", "tertiary", "tertiary_link"]
+        [
+          "in",
+          "class",
+          "secondary",
+          "secondary_link",
+          "tertiary",
+          "tertiary_link"
+        ]
       ],
       "layout": {
         "line-cap": "round",
@@ -425,7 +432,14 @@
         "all",
         ["!=", "bridge", "yes"],
         ["!=", "tunnel", "yes"],
-        ["in", "class", "secondary", "secondary_link", "tertiary", "tertiary_link"]
+        [
+          "in",
+          "class",
+          "secondary",
+          "secondary_link",
+          "tertiary",
+          "tertiary_link"
+        ]
       ],
       "layout": {
         "line-cap": "round",
@@ -572,7 +586,14 @@
       "filter": [
         "all",
         ["==", "bridge", "yes"],
-        ["in", "class", "secondary", "secondary_link", "tertiary", "tertiary_link"]
+        [
+          "in",
+          "class",
+          "secondary",
+          "secondary_link",
+          "tertiary",
+          "tertiary_link"
+        ]
       ],
       "layout": {"line-join": "round"},
       "paint": {
@@ -706,7 +727,14 @@
       "filter": [
         "all",
         ["==", "bridge", "yes"],
-        ["in", "class", "secondary", "secondary_link", "tertiary", "tertiary_link"]
+        [
+          "in",
+          "class",
+          "secondary",
+          "secondary_link",
+          "tertiary",
+          "tertiary_link"
+        ]
       ],
       "layout": {"line-join": "round"},
       "paint": {
@@ -822,7 +850,14 @@
       "filter": [
         "all",
         ["==", "tunnel", "yes"],
-        ["in", "class", "secondary", "secondary_link", "tertiary", "tertiary_link"]
+        [
+          "in",
+          "class",
+          "secondary",
+          "secondary_link",
+          "tertiary",
+          "tertiary_link"
+        ]
       ],
       "layout": {"line-join": "round"},
       "paint": {
@@ -957,7 +992,14 @@
       "filter": [
         "all",
         ["==", "tunnel", "yes"],
-        ["in", "class", "secondary", "secondary_link", "tertiary", "tertiary_link"]
+        [
+          "in",
+          "class",
+          "secondary",
+          "secondary_link",
+          "tertiary",
+          "tertiary_link"
+        ]
       ],
       "layout": {"line-join": "round"},
       "paint": {
@@ -1378,6 +1420,52 @@
       }
     },
     {
+      "id": "school_name",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "amenity",
+      "minzoom": 12,
+      "maxzoom": 22,
+      "filter": ["all"],
+      "layout": {
+        "text-field": "{name}",
+        "icon-allow-overlap": false,
+        "text-max-width": 10,
+        "icon-ignore-placement": false,
+        "icon-optional": false,
+        "icon-rotation-alignment": "auto",
+        "icon-text-fit": "none",
+        "icon-rotate": 1,
+        "icon-keep-upright": true,
+        "icon-anchor": "center",
+        "icon-pitch-alignment": "auto",
+        "visibility": "visible",
+        "icon-size": 1,
+        "text-anchor": "center",
+        "text-offset": [0, 0],
+        "text-size": 11,
+        "symbol-placement": "point",
+        "text-allow-overlap": false,
+        "text-pitch-alignment": "auto",
+        "text-rotation-alignment": "auto",
+        "text-letter-spacing": 0.05,
+        "text-justify": "auto",
+        "text-keep-upright": false,
+        "text-transform": "none",
+        "text-optional": false,
+        "symbol-avoid-edges": false,
+        "symbol-spacing": 1,
+        "symbol-z-order": "auto",
+        "text-padding": 0,
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "rgba(18, 24, 26, 1)",
+        "icon-color": "rgba(238, 6, 6, 1)",
+        "icon-translate-anchor": "map"
+      }
+    },
+    {
       "id": "exits",
       "type": "symbol",
       "source": "openmaptiles",
@@ -1405,7 +1493,7 @@
         "icon-anchor": "center",
         "icon-pitch-alignment": "auto",
         "visibility": "visible",
-        "icon-image": "dk_exit",
+        "icon-image": "{class}_100",
         "icon-size": 0.6,
         "text-anchor": "center",
         "text-offset": [0, 0],

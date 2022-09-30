@@ -1,5 +1,38 @@
 # areas
 
+## administrative border
+
+    "place": "island",
+    "boundary": "administrative",
+    "ref:nuts": "DK01",
+    "ref:nuts:2": "DK01",
+    "type": "boundary",
+
+    "ref:nuts": "DK0",
+    "ref:nuts:1": "DK0",
+
+## forest
+
+  manual select does not match with lcol_table, should have 771168 records
+  ($."landuse" == "forest") ||($."natural" == "wood") 
+
+## building
+
+  could not find 3d info, need more time
+
+  ### normal building
+
+
+  ### public building
+
+    shop in "mall"
+    building in "school,hospital,university,stadium,sports_hall"
+    
+  ### industrial building
+
+    builing in  "industrial,warehouse,parking,manufacture,hangar,garages,service,transportation,office,retail,commercial"
+
+
 ## landuse
 
   ### parking
@@ -10,15 +43,21 @@
 
     $."landuse" == "residential"
 
-    Copenhagen water park is classified as pitch as well
-
   ### forest
 
     ($."landuse" == "forest")
   
   ### leisure
 
-    ($."leisure" == "park" || ($."leisure" == "pitch" && $."sport" != "surfing"))
+    select count(*) from osmtile.skan_poly
+where
+	--agg_tags ? 'leisure' and ( (agg_tags ->> 'leisure') = 'track' or (agg_tags ->> 'leisure') = 'pitch') -- < 200ms
+	--agg_tags @@ '$."leisure" == "track" || $."leisure" == "pitch"'::jsonpath -- < 100ms
+	agg_tags @> '{"leisure":"track"}' or agg_tags @> '{"leisure":"pitch"}' -- < 100ms I suggest using this method.
+; --39045.
+
+    agg_tags ? 'leisure' and (agg_tags->>'leisure'  in ('track','pitch'))
+    ($."leisure" == "park" || ($."leisure" == "pitch" && $."sport" != "surfing"))
     Copenhagen cable park on water is classified as pitch as well, so not good to use green. 
 
   ### school 
@@ -81,9 +120,11 @@
 
 ## line
 
-### rail
+### railway line
     ["name", "tunnel", "bridge"] attributes 
     exists($."railway") && $."railway" != "ferry" && $."railway" != "proposed"
+
+    exclude railway == "abandoned"
 
 
 

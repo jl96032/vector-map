@@ -259,7 +259,7 @@
         "all",
         ["!=", "bridge", "yes"],
         ["!=", "tunnel", "yes"],
-        ["in", "class", "secondary", "tertiary"]
+        ["in", "class", "secondary", "secondary_link", "tertiary", "tertiary_link"]
       ],
       "layout": {
         "line-cap": "round",
@@ -425,7 +425,7 @@
         "all",
         ["!=", "bridge", "yes"],
         ["!=", "tunnel", "yes"],
-        ["in", "class", "secondary", "tertiary"]
+        ["in", "class", "secondary", "secondary_link", "tertiary", "tertiary_link"]
       ],
       "layout": {
         "line-cap": "round",
@@ -572,7 +572,7 @@
       "filter": [
         "all",
         ["==", "bridge", "yes"],
-        ["in", "class", "secondary", "tertiary"]
+        ["in", "class", "secondary", "secondary_link", "tertiary", "tertiary_link"]
       ],
       "layout": {"line-join": "round"},
       "paint": {
@@ -706,7 +706,7 @@
       "filter": [
         "all",
         ["==", "bridge", "yes"],
-        ["in", "class", "secondary", "tertiary"]
+        ["in", "class", "secondary", "secondary_link", "tertiary", "tertiary_link"]
       ],
       "layout": {"line-join": "round"},
       "paint": {
@@ -822,7 +822,7 @@
       "filter": [
         "all",
         ["==", "tunnel", "yes"],
-        ["in", "class", "secondary", "tertiary"]
+        ["in", "class", "secondary", "secondary_link", "tertiary", "tertiary_link"]
       ],
       "layout": {"line-join": "round"},
       "paint": {
@@ -957,7 +957,7 @@
       "filter": [
         "all",
         ["==", "tunnel", "yes"],
-        ["in", "class", "secondary", "tertiary"]
+        ["in", "class", "secondary", "secondary_link", "tertiary", "tertiary_link"]
       ],
       "layout": {"line-join": "round"},
       "paint": {

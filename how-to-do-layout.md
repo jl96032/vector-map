@@ -2,7 +2,13 @@
 
     layers on the botton in the layerslist have higher priority.
     "padding" can be used to block souring symbols
+    "spacing" can be used to block duplicate street names
+    "dasharray"
+    # design doc ["literal", [5, 3]], 
+        the first number means the length of solid line, the second means gap
+    https://tilemill-project.github.io/tilemill/docs/guides/styling-lines/
 
+    ? how to avoid jump in effect for new objects, should we fade in them earlier?
 
 ## point symbols
 

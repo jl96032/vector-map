@@ -364,7 +364,7 @@
         "all",
         ["!=", "bridge", "yes"],
         ["!=", "tunnel", "yes"],
-        ["in", "class", "service", "track"]
+        ["in", "class", "service", "track", "living_street"]
       ],
       "layout": {
         "line-cap": "round",
@@ -504,7 +504,7 @@
       "filter": [
         "all",
         ["==", "bridge", "yes"],
-        ["in", "class", "service", "track"]
+        ["in", "class", "service", "track", "living_street"]
       ],
       "layout": {"line-join": "round"},
       "paint": {

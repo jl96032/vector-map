@@ -9,7 +9,7 @@
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "tiles": ["https://tiles.enirotest.com/maps/osm/{z}/{x}/{y}.vector.pbf?"],
+      "tiles": ["https://cdn.enirotest.com/maps/osm/{z}/{x}/{y}.vector.pbf?"],
       "minZoom": 0,
       "maxZoom": 22
     }

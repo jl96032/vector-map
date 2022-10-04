@@ -33,14 +33,6 @@
       "paint": {"fill-color": "rgb(158,189,255)"}
     },
     {
-      "id": "water",
-      "type": "fill",
-      "source": "openmaptiles",
-      "source-layer": "water",
-      "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "rgb(158,189,255)"}
-    },
-    {
       "id": "landuse_scrub",
       "type": "fill",
       "source": "openmaptiles",
@@ -52,6 +44,15 @@
       ],
       "layout": {"visibility": "visible"},
       "paint": {"fill-color": "rgba(200, 254, 193, 1)", "fill-opacity": 1}
+    },
+    {
+      "id": "landuse_water",
+      "type": "fill",
+      "source": "openmaptiles",
+      "source-layer": "landuse",
+      "filter": ["all", ["==", "class", "water"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgb(158,189,255)"}
     },
     {
       "id": "landuse_industrial",
@@ -66,8 +67,8 @@
       "id": "landuse_parking",
       "type": "fill",
       "source": "openmaptiles",
-      "source-layer": "parking",
-      "filter": ["all", ["==", "amenity", "parking"]],
+      "source-layer": "landuse",
+      "filter": ["all", ["==", "class", "parking"]],
       "layout": {"visibility": "visible"},
       "paint": {"fill-color": "rgba(183, 178, 178, 1)", "fill-opacity": 1}
     },
@@ -103,15 +104,6 @@
       "paint": {"fill-color": "rgba(176, 213, 154, 1)", "fill-opacity": 0.5}
     },
     {
-      "id": "landuse_water",
-      "type": "fill",
-      "source": "openmaptiles",
-      "source-layer": "land_use",
-      "filter": ["all", ["==", "landuse", "water"]],
-      "layout": {"visibility": "visible"},
-      "paint": {"fill-color": "rgba(66, 168, 244, 1)", "fill-opacity": 1}
-    },
-    {
       "id": "landuse_park",
       "type": "fill",
       "source": "openmaptiles",
@@ -126,7 +118,7 @@
       "source": "openmaptiles",
       "source-layer": "leisure",
       "filter": ["all", ["==", "leisure", "pitch"]],
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {"fill-color": "rgba(129, 197, 94, 1)", "fill-opacity": 0.8}
     },
     {
@@ -142,8 +134,8 @@
       "id": "landuse_wood",
       "type": "fill",
       "source": "openmaptiles",
-      "source-layer": "forest",
-      "filter": ["all"],
+      "source-layer": "landuse",
+      "filter": ["all", ["==", "class", "forest"]],
       "layout": {"visibility": "visible"},
       "paint": {"fill-color": "rgba(125, 211, 94, 0.8)", "fill-opacity": 1}
     },
@@ -167,7 +159,7 @@
       "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "rgb(158,189,255)",
-        "line-width": {"stops": [[6, 0.6], [20, 6]]}
+        "line-width": {"stops": [[6, 0.6], [20, 3]]}
       }
     },
     {
@@ -1136,8 +1128,8 @@
       ],
       "layout": {"visibility": "visible"},
       "paint": {
-        "fill-color": "rgba(209, 113, 96, 1)",
-        "fill-opacity": 0.6,
+        "fill-color": "rgba(191, 135, 123, 1)",
+        "fill-opacity": 1,
         "fill-antialias": true,
         "fill-outline-color": "rgba(248, 245, 245, 1)"
       }
@@ -1181,7 +1173,7 @@
       "source": "openmaptiles",
       "source-layer": "railway",
       "filter": ["all", ["==", "tunnel", "yes"]],
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "rgba(20, 16, 16, 1)",
         "line-dasharray": ["literal", [1, 6]],
@@ -1243,7 +1235,7 @@
       "source": "openmaptiles",
       "source-layer": "railway",
       "filter": ["all", ["==", "bridge", "yes"]],
-      "layout": {"visibility": "none"},
+      "layout": {"visibility": "visible"},
       "paint": {
         "line-color": "#bbb",
         "line-dasharray": [0.2, 8],
@@ -1481,7 +1473,12 @@
       "source-layer": "public_transportation",
       "minzoom": 12,
       "maxzoom": 22,
-      "filter": ["all", ["in", "class", "dk_exit"], ["!=", "name", ""]],
+      "filter": [
+        "all",
+        ["in", "class", "dk_exit"],
+        ["!=", "name", ""],
+        ["!=", "ref", ""]
+      ],
       "layout": {
         "text-field": "{name}",
         "icon-allow-overlap": false,

@@ -1,9 +1,7 @@
-import logo from './logo.svg';
 import {Map} from './components/map.js';
 import './App.css';
 import Navbar from './components/navbar';
-import { useState } from "react";
-import { BrowserRouter as Router, Route, Routes, Link, useParams, useNavigate} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes, useParams} from 'react-router-dom'
 
 function App() {
   
@@ -23,9 +21,6 @@ function App() {
               <Route path="/" element={<Map showCollisionBoxes={false}/>}></Route>
               {/* <Route path="showCollisionBoxes" element={<Map showCollisionBoxes={true}/>}></Route> */}
               <Route path=":z1/:lat1/:lng1" element={<Map showCollisionBoxes={false}/>}></Route>
-
-            
-
           </Routes>
       </Router>
     </div>

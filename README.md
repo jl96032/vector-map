@@ -68,3 +68,112 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
+#### use https://www.toptal.com/developers/css/sprite-generator/ 
+to generate sprite png from folders, copy out all config info but use positive location number instead of negative numbers
+
+## public transport symbols
+###  railway symbols
+ - light rail  (S-train, Pendaltåg station)
+   - railway : station, stop, halt
+   - ligth_rail: yes
+ - subway
+   - railway: station
+   - subway : yes
+ - train
+   - railway: station
+   - train: yes
+-  tram
+   -  railway: tram_stop
+   -  tram: yes
+-  cable car? https://goo.gl/maps/znEHYUJzPcGoXgNA7
+   -  aerialway: yes
+   -  public_transport: stop_position
+
+attribute: symbol (ligth_rail, ligth_rail, train, tram, busstop )  -> name in layout - {symbols}_75
+
+## searching opensteetmap by id (type+id)
+https://nominatim.openstreetmap.org/ui/details.html?osmtype=N&osmid=332572924
+stadhagen 
+  - relations
+    - 
+  entrance 5 objects
+id : 332572924(entrance), 729858226(entrance), 4225502376(target), 332572923(entrance), 332572930(entrance)
+  - transportaion harbour
+    - 
+
+
+### highway 
+  - exits
+    - highway: motorway_junction
+    - ref: 6
+  
+  
+agg_tags @@ '!exists ($."addr:city") && !exists ($."power") 
+&& !exists ($."amenity") && !exists ($."street_cabinet") && 
+!exists($."crossing") && !exists($."natural") && !exists($."shop") &&  !exists($."emergency")'
+
+#### in the image field use {class}_11 to skipp different type of png setups
+
+## another way of making png sprite
+- https://w3bits.com/css-sprites/
+
+## how to do svg sprites?
+- https://www.sitepoint.com/use-svg-image-sprites/
+- https://w3bits.com/svg-sprites/
+## if I create a larger symbol, what will collition control get effected.
+
+
+
+
+## point symbols
+  ### how to create and maintain sprites library
+    #### guide lines for styling
+    according to the doc of mapbox 
+    https://maplibre.org/maplibre-gl-js-docs/style-spec/sprite/
+
+    We suppose to have 4 files if we would like to show symbols correctly
+    https://ux14-geo-test.herokuapp.com/osm-liberty-origin.json
+    https://ux14-geo-test.herokuapp.com/osm-liberty-origin.png
+    https://ux14-geo-test.herokuapp.com/osm-liberty-origin@2x.json
+    https://ux14-geo-test.herokuapp.com/osm-liberty-origin@2x.png
+
+    currently, we are setting symbols with the following size
+    
+    ####  our origin png size
+      - retina 100% 38X38
+      - retina 75% 28X28
+
+      - ordinary 100% 17X17
+      - ordinary 75% 15X15
+    To be able to maintain library easier, we put all pngs into grid and create some white space around it.
+    then the index json file can be easierly setted up by adding 50 or 30 to x and y location
+
+    ```
+    "aerialway_15": {
+        "height": 19,   
+        "pixelRatio": 1,
+        "width": 19,
+        "x": 80,// horizontal location for image center couting from left up corner
+        "y": 190 //vertical location for image center couting from left up corner
+      },
+    ```
+  ### overlap
+  ### prioritazation 
+    To simplify the layout file, we should use {class}_100 or {class}_75 in the 
+    Icon Layout properties -> Image when they have same priority value
+## text 
+  #### text size
+     size 12 is good for normal text
+     size 10 and bold if for important text
+  #### font
+
+### prioritazation 
+  To simplify the layout file, we should use {class}_100 or {class}_75 in the 
+  Icon Layout properties -> Image when they have same priority value
+
+

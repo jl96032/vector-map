@@ -2566,7 +2566,7 @@
       "source": "openmaptiles",
       "source-layer": "placename",
       "minzoom": 0,
-      "maxzoom": 12,
+      "maxzoom": 13,
       "filter": ["all", ["in", "place", "city"]],
       "layout": {
         "text-field": "{name}",

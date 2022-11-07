@@ -1,4 +1,4 @@
-{
+{ 
   "version": 8,
   "name": "OSM Liberty",
   "metadata": {
@@ -9,7 +9,7 @@
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "tiles": ["https://cdn.enirotest.com/maps/osm/{z}/{x}/{y}.vector.pbf?"],
+      "tiles": ["https://dev-cdn.enirotest.com/maps/osm/{z}/{x}/{y}.vector.pbf?"],
       "minZoom": 0,
       "maxZoom": 22
     },
@@ -18,27 +18,23 @@
       "url": "https://s3-eu-west-1.amazonaws.com/tiles.os.uk/v2/data/vector/open-zoomstack/config.json"
     }
   },
-  "sprite": "https://ux14-geo-test.herokuapp.com/map",
+  "sprite": "https://ux14-geo-dev.herokuapp.com/map",
   "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=1JIfeS9SHvVJt8fORsPr",
   "layers": [
     {
       "id": "background",
       "type": "background",
       "layout": {"visibility": "visible"},
-      "paint": {
-        "background-color": {
-          "stops": [[6.99, "rgb(158,189,255)"], [7, "rgba(243, 243, 221, 1)"]]
-        }
-      }
+      "paint": {"background-color": "rgba(243, 243, 221, 1)"}
     },
     {
       "id": "landcover_country",
       "type": "fill",
       "source": "openmaptiles",
       "source-layer": "country",
-      "maxzoom": 7,
+      "maxzoom": 0,
       "filter": ["all"],
-      "layout": {"visibility": "visible"},
+      "layout": {"visibility": "none"},
       "paint": {
         "fill-color": "rgba(243, 243, 221, 1)",
         "fill-opacity": 1,
@@ -50,10 +46,10 @@
       "type": "fill",
       "source": "openmaptiles",
       "source-layer": "landuse",
-      "filter": ["all", ["==", "color", "green"]],
+      "filter": ["all", ["==", "color", 2]],
       "layout": {"visibility": "visible"},
       "paint": {
-        "fill-color": "rgba(210, 226, 200, 1)",
+        "fill-color": "rgba(161, 218, 143, 1)",
         "fill-opacity": 1,
         "fill-antialias": true
       }
@@ -63,10 +59,10 @@
       "type": "fill",
       "source": "openmaptiles",
       "source-layer": "landuse",
-      "filter": ["all", ["==", "color", "brown"]],
+      "filter": ["all", ["==", "color", 7]],
       "layout": {"visibility": "visible"},
       "paint": {
-        "fill-color": "rgba(232, 232, 232, 1)",
+        "fill-color": "rgba(226, 157, 157, 1)",
         "fill-opacity": 1,
         "fill-antialias": true
       }
@@ -76,7 +72,7 @@
       "type": "fill",
       "source": "openmaptiles",
       "source-layer": "landuse",
-      "filter": ["all", ["==", "color", "water"]],
+      "filter": ["all", ["==", "color", 1]],
       "layout": {"visibility": "visible"},
       "paint": {
         "fill-color": "rgb(158,189,255)",
@@ -89,7 +85,7 @@
       "type": "fill",
       "source": "openmaptiles",
       "source-layer": "world_water",
-      "minzoom": 7,
+      "minzoom": 0,
       "filter": ["all"],
       "layout": {"visibility": "visible"},
       "paint": {"fill-color": "rgb(158,189,255)"}
@@ -2623,9 +2619,10 @@
         "text-keep-upright": true,
         "icon-allow-overlap": false,
         "icon-ignore-placement": false,
-        "icon-size": 1,
         "icon-keep-upright": true,
-        "icon-image": "oneway_100"
+        "icon-image": "oneway_100",
+        "icon-size": 0.7,
+        "icon-padding": 40
       }
     },
     {

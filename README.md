@@ -1,5 +1,12 @@
 # Getting Started with Create React App
 
+# Heroku local
+modified config var and added NODE_OPTIONS with value --max_old_space_size=1024
+heroku local -p 3000
+git remote add heroku-prod ----
+git push heroku-prod master
+heroku logs
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

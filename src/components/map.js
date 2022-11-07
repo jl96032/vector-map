@@ -62,39 +62,36 @@ function Map(props){
   useEffect(() => {
    // if (map.current) return;
   
-  if (refresh === false && map.current!==null ) return
+    if (refresh === false && map.current!==null ) return
 
-  setRefresh(false);
+    setRefresh(false);
+
     map.current = new maplibregl.Map({
       container: mapContainer.current,
-   //   style: `https://api.maptiler.com/maps/streets/style.json?key=${API_KEY}`,
+  //   style: `https://api.maptiler.com/maps/streets/style.json?key=${API_KEY}`,
   //    style: "https://github.com/jl96032/react-maplibre-app/blob/master/public/osm_liberty.json?",
       //  style: "http://localhost/osm_liberty-localhost.json",
-   //   style: "http://localhost:3001/osm_liberty.json",
-     // style: "https://master.d34xthyk9j1ki2.amplifyapp.com/osm_liberty.json",
+  //   style: "http://localhost:3001/osm_liberty.json",
+    // style: "https://master.d34xthyk9j1ki2.amplifyapp.com/osm_liberty.json",
       style: "/osm_liberty.json",
       center: [lng, lat],
       zoom: zoom
     });
     map.current.addControl(new maplibregl.NavigationControl());
-    map.current.on('move', () => {
-      setLng(map.current.getCenter().lng.toFixed(4));
-      setLat(map.current.getCenter().lat.toFixed(4));
-      setZoom(map.current.getZoom().toFixed(2));
-    });
+    
 
     map.current.on('moveend', () => {
       var tmpZ= map.current.getZoom().toFixed(2);
-      var tmpLng = map.current.getCenter().lng.toFixed(4);
       var tmpLat = map.current.getCenter().lat.toFixed(4);
-      setLng(map.current.getCenter().lng.toFixed(4));
-      setLat(map.current.getCenter().lat.toFixed(4));
-      setZoom(map.current.getZoom().toFixed(2));
+      var tmpLng = map.current.getCenter().lng.toFixed(4);
       
-   //   console.log("move end, temp z",tmpZ, tmpLat, tmpLng);
-   //   console.log("move end, zoom ",zoom, lat, lng);
+      setZoom(map.current.getZoom().toFixed(2));
+      setLat(map.current.getCenter().lat.toFixed(4));
+      setLng(map.current.getCenter().lng.toFixed(4));
+      
+    //  console.log("move end, temp z",tmpZ, tmpLat, tmpLng);
+    //  console.log("move end, zoom ",zoom, lat, lng);
       navigate(`../${tmpZ}/${tmpLat}/${tmpLng}`);
-   //   console.log("collisionControl", collisionControl);
       });
     
 
@@ -102,7 +99,7 @@ function Map(props){
     // map.current.showCollisionBoxes = props.showCollisionBoxes;
     map.current.showCollisionBoxes = collisionControl;
 
-    
+      
   },[collisionControl, refresh, lat, lng, navigate, zoom]);
   
  
@@ -114,6 +111,7 @@ function Map(props){
       }
       window.addEventListener('mousemove', update)
       window.addEventListener('touchmove', update)
+   //   console.log("move end, zoom ",zoom, lat, lng);
       return () => {
         
         window.removeEventListener('mousemove', update)

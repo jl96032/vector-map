@@ -27,7 +27,6 @@ function Map(props){
   lng1 = lng1 || 12.549;
   
   
-  
   const [lng, setLng] = useState(lng1);
   const [lat, setLat] = useState(lat1);
   const [zoom, setZoom] = useState(z1);

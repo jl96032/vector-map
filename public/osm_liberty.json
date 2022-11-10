@@ -9,7 +9,7 @@
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "tiles": ["https://dev-cdn.enirotest.com/maps/osm/{z}/{x}/{y}.vector.pbf?"],
+      "tiles": ["https://cdn.enirotest.com/maps/osm/{z}/{x}/{y}.vector.pbf?"],
       "minZoom": 0,
       "maxZoom": 22
     },
@@ -18,7 +18,7 @@
       "url": "https://s3-eu-west-1.amazonaws.com/tiles.os.uk/v2/data/vector/open-zoomstack/config.json"
     }
   },
-  "sprite": "https://ux14-geo-dev.herokuapp.com/map",
+  "sprite": "https://ux14-geo-test.herokuapp.com/map",
   "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=1JIfeS9SHvVJt8fORsPr",
   "layers": [
     {

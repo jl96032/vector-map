@@ -827,7 +827,7 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "roads",
-      "minzoom": 11,
+      "minzoom": 10,
       "filter": [
         "all",
         ["!=", "bridge", "yes"],
@@ -987,7 +987,7 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "roads",
-      "minzoom": 11,
+      "minzoom": 10,
       "filter": [
         "all",
         ["!=", "bridge", "yes"],
@@ -1694,7 +1694,7 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "railway",
-      "minzoom": 14,
+      "minzoom": 11,
       "filter": [
         "all",
         ["in", "railway", "tram", "funicular"],
@@ -2741,7 +2741,7 @@
         "icon-size": {"stops": [[11, 0.5], [14, 0.7]]},
         "text-anchor": "top",
         "text-offset": [0, 0.6],
-        "text-size": {"stops": [[11, 0], [14, 12]]}
+        "text-size": {"stops": [[11, 0], [12, 10], [15, 12]]}
       },
       "paint": {
         "text-color": "rgba(11, 1, 1, 1)",
@@ -2750,13 +2750,13 @@
       }
     },
     {
-      "id": "placename_5",
+      "id": "placename_6",
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "placename",
-      "minzoom": 11,
+      "minzoom": 12,
       "maxzoom": 19,
-      "filter": ["all", ["in", "place", "neighbourhood"]],
+      "filter": ["all", ["in", "place", "isolated_dwelling"]],
       "layout": {
         "text-field": "{name}",
         "icon-allow-overlap": false,
@@ -2780,12 +2780,58 @@
         "icon-size": 0.5,
         "text-anchor": "top",
         "text-offset": [0, 0],
-        "text-size": {"stops": [[13, 12], [14, 12]]},
+        "text-size": {"stops": [[12, 10], [14, 12]]},
         "text-letter-spacing": 0.04,
         "text-font": ["Cabin"],
         "symbol-spacing": 250,
         "icon-padding": 10,
-        "text-ignore-placement": false
+        "text-ignore-placement": false,
+        "text-padding": 10
+      },
+      "paint": {
+        "text-color": "rgba(11, 1, 1, 1)",
+        "icon-color": "rgba(238, 6, 6, 1)",
+        "icon-translate-anchor": "map"
+      }
+    },
+    {
+      "id": "placename_5",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "placename",
+      "minzoom": 10,
+      "maxzoom": 19,
+      "filter": ["all", ["in", "place", "neighbourhood", "hamlet"]],
+      "layout": {
+        "text-field": "{name}",
+        "icon-allow-overlap": false,
+        "text-max-width": {
+          "property": "",
+          "type": "exponential",
+          "stops": [
+            [{"zoom": 6, "value": 0}, 10],
+            [{"zoom": 10, "value": 0}, 10]
+          ]
+        },
+        "icon-ignore-placement": false,
+        "icon-optional": false,
+        "icon-rotation-alignment": "auto",
+        "icon-text-fit": "none",
+        "icon-rotate": 1,
+        "icon-keep-upright": true,
+        "icon-anchor": "center",
+        "icon-pitch-alignment": "auto",
+        "visibility": "visible",
+        "icon-size": 0.5,
+        "text-anchor": "top",
+        "text-offset": [0, 0],
+        "text-size": {"stops": [[10, 10], [14, 12]]},
+        "text-letter-spacing": 0.04,
+        "text-font": ["Cabin"],
+        "symbol-spacing": 250,
+        "icon-padding": 10,
+        "text-ignore-placement": false,
+        "text-padding": 10
       },
       "paint": {
         "text-color": "rgba(11, 1, 1, 1)",
@@ -2798,7 +2844,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "placename",
-      "minzoom": 11,
+      "minzoom": 10,
       "maxzoom": 19,
       "filter": ["all", ["in", "place", "village", "quater"]],
       "layout": {
@@ -2820,16 +2866,17 @@
         "icon-keep-upright": true,
         "icon-anchor": "center",
         "icon-pitch-alignment": "auto",
-        "visibility": "visible",
+        "visibility": "none",
         "icon-size": 0.5,
         "text-anchor": "top",
         "text-offset": [0, 0],
-        "text-size": {"stops": [[4, 10], [10, 13]]},
+        "text-size": {"stops": [[10, 10], [10, 13]]},
         "text-letter-spacing": 0.04,
-        "text-font": ["Cabin Bold"],
+        "text-font": ["Cabin"],
         "symbol-spacing": 250,
         "icon-padding": 10,
-        "text-ignore-placement": false
+        "text-ignore-placement": false,
+        "text-padding": 10
       },
       "paint": {
         "text-color": "rgba(11, 1, 1, 1)",
@@ -2868,13 +2915,13 @@
         "icon-size": 0.5,
         "text-anchor": "top",
         "text-offset": [0, 0],
-        "text-size": {"stops": [[6, 10], [13, 13]]},
+        "text-size": {"stops": [[6, 12], [13, 13]]},
         "text-letter-spacing": 0.04,
         "text-font": ["Cabin"],
         "symbol-spacing": 250,
         "icon-padding": 10,
         "text-ignore-placement": false,
-        "text-padding": 5
+        "text-padding": 10
       },
       "paint": {
         "text-color": "rgba(11, 1, 1, 1)",
@@ -2905,14 +2952,14 @@
         "icon-size": 0.5,
         "text-anchor": "top",
         "text-offset": [0, 0],
-        "text-size": {"stops": [[6, 10], [13, 13]]},
+        "text-size": {"stops": [[6, 12], [13, 13]]},
         "text-letter-spacing": 0.04,
         "text-font": ["Cabin"],
         "symbol-spacing": 250,
         "icon-padding": 10,
         "text-ignore-placement": false,
         "text-max-width": 2,
-        "text-padding": 20
+        "text-padding": 10
       },
       "paint": {
         "text-color": "rgba(11, 1, 1, 1)",
@@ -2957,7 +3004,8 @@
         "symbol-spacing": 250,
         "icon-padding": 10,
         "text-ignore-placement": false,
-        "symbol-avoid-edges": false
+        "symbol-avoid-edges": false,
+        "text-padding": 10
       },
       "paint": {
         "text-color": "rgba(11, 1, 1, 1)",

@@ -286,6 +286,16 @@
       "paint": {"fill-color": "rgba(207, 207, 207, 1)", "fill-opacity": 1}
     },
     {
+      "id": "landuse_pedestrian",
+      "type": "fill",
+      "source": "openmaptiles",
+      "source-layer": "landuse",
+      "minzoom": 15,
+      "filter": ["all", ["==", "class", "pedestrian"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "rgba(210, 210, 210, 1)", "fill-opacity": 1}
+    },
+    {
       "id": "building_historical",
       "type": "fill",
       "source": "openmaptiles",

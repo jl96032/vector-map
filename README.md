@@ -1,6 +1,10 @@
 # Getting Started with Create React App
 
 # Heroku local
+cd /Users/liang/work/node/vector-map
+
+heroku ps:scale web=1
+
 modified config var and added NODE_OPTIONS with value --max_old_space_size=1024
 heroku local -p 3000
 git remote add heroku-prod ----

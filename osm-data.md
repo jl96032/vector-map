@@ -161,6 +161,8 @@ where
 - ferry terminal (so many points)
   -  "amenity": "ferry_terminal"
   -  agg_tags @@ '!exists($."tourism") && $."amenity" == "ferry_terminal"'
+  -  
+
 
     - parking, normally are polygons
     https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking
@@ -212,6 +214,8 @@ https://github.com/go-spatial/tegola/issues/470
 https://github.com/go-spatial/tegola/issues/526
 
 
+ferry agg_tags ? 'route' and (agg_tags->>'route' = 'ferry' ) and not agg_tags ? 'ferry' and agg_tags->>'type' = 'route'
+agg_tags ? 'route' and (agg_tags->>'seamark:type' = 'ferry_route')
 
 roads_extra		1	agg_tags @@ 'exists ($."highway")'::jsonpath	
 roads_jsonpath		1	agg_tags @@ 'exists ($."highway") && ($."route" == "hiking")'::jsonpath	
